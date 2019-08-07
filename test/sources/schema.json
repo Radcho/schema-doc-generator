@@ -1,0 +1,93 @@
+{
+	"id": "http://2ring.com/gadgets/broadcast",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"default": "broadcastGadget",
+			"description": "ID of the Broadcast gadget. Only a single instance of the Broadcast gadget should exist in the agent's finesse desktop environment."
+		},
+		"messageTemplates": {
+			"type": "array",
+			"default": [],
+			"description": "Array of message templates usable while composing the message.",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Name of the message template."
+					},
+					"text": {
+						"type": "string",
+						"description": "HTML string containing the message contents."
+					}
+				},
+				"required": [ "name", "text" ]
+			}
+		},
+		"messageExpirations": {
+			"type": "array",
+			"default": [],
+			"description": "Array of usable message expiration timers. These will be selectable while composing the message.",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Name displayed on the expiration button after an expiration is chosen."
+					},
+					"itemName": {
+						"type": "string",
+						"description": "Name displayed in the expiration dropdown."
+					},
+					"timeSeconds": {
+						"type": [
+							"integer",
+							"null"
+						],
+						"description": "Number of seconds after which the message will disappear from agent's Ticker. Set the setting to `null` for no expiration."
+					}
+				},
+				"required": [ "name", "itemName", "timeSeconds" ]
+			}
+		},
+		"blinkFor": {
+			"type": "array",
+			"default": [],
+			"description": "Message blink timers for the sent messages.",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Name displayed on the blink button after a blink timer is chosen."
+					},
+					"itemName": {
+						"type": "string",
+						"description": "Name displayed in the blink timer dropdown."
+					},
+					"timeSeconds": {
+						"type": [
+							"integer",
+							"null"
+						],
+						"description": "Number of seconds that the message will be blinking. Set the setting to `null` for indefinite blinking, or to `-1` if message should not blink."
+					}
+				},
+				"required": [ "name", "itemName", "timeSeconds" ]
+			}
+		},
+		"defaultMessageExpirationSeconds": {
+			"type": [ "number", "null" ],
+			"default": null,
+			"description": "Default expiration in seconds when no message expiration is selected. The default expiration must be in the *messageExpirations* array."
+		},
+		"defaultBlinkForSeconds": {
+			"type": "number",
+			"default": -1,
+			"description": "Default expiration in seconds when no message expiration is selected. The default expiration must be in the *blinkFor* array."
+		}
+	},
+	"$schema": "http://json-schema.org/draft-04/schema#"
+}
