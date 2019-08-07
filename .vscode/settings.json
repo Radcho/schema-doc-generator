@@ -1,0 +1,8 @@
+{
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.autoClosingTags": false,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "typescript.preferences.quoteStyle": "single",
+    "files.trimTrailingWhitespace": true,
+    "editor.insertSpaces": false
+}

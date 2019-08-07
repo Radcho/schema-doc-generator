@@ -1,0 +1,118 @@
+{
+    "defaultSeverity": "error",
+    "extends": "tslint:recommended",
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**"
+        ]
+    },
+    "rules": {
+        "adjacent-overload-signatures": true,
+        "member-access": true,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "public-static-field",
+                    "public-instance-field",
+                    "protected-instance-field",
+                    "private-static-field",
+                    "private-instance-field",
+                    "public-constructor",
+                    "private-constructor",
+                    "public-static-method",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-static-method",
+                    "private-instance-method"
+                ]
+            }
+        ],
+        "no-any": true,
+        "no-empty-interface": true,
+        "no-inferrable-types": true,
+        "no-internal-module": true,
+        "no-magic-numbers": true,
+        "no-namespace": true,
+        "no-reference": true,
+        "no-var-requires": true,
+        "prefer-for-of": true,
+        "promise-function-async": true,
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "max-line-length": [
+            true,
+            120
+        ],
+        "indent": [
+            true,
+            "tabs"
+        ],
+        "unified-signatures": false,
+        "forin": false,
+        "no-string-throw": true,
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "no-use-before-declare": false,
+        "object-literal-key-quotes": false,
+        "ignore-arrow-function-shorthand": false,
+        "no-this-assignment": true,
+        "ordered-imports": true,
+        "switch-default": true,
+        "radix": false,
+        "no-conditional-assignment": true,
+        "triple-equals": [
+            true,
+            "allow-null-check",
+            "allow-undefined-check"
+        ],
+        "max-classes-per-file": [
+            true,
+            1
+        ],
+        "no-string-literal": true,
+        "no-angle-bracket-type-assertion": true,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ],
+        "newline-before-return": true,
+        "no-unnecessary-callback-wrapper": true,
+        "max-file-line-count": false,
+        "trailing-comma": [
+            true,
+            {
+                "multiline": {
+                    "objects": "never",
+                    "arrays": "never",
+                    "functions": "never"
+                },
+                "singleline": "never"
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "align": false,
+        "no-console": false,
+        "no-var-keyword": true,
+        "array-type": [
+            true,
+            "generic"
+        ],
+        "no-empty": false,
+        "eofline": true,
+        "arrow-return-shorthand": true,
+        "binary-expression-operand-order": true,
+        "interface-name": [
+            true,
+            "always-prefix"
+        ],
+        "linebreak-style": false
+    }
+}
